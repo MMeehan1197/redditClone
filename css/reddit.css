@@ -1,0 +1,31 @@
+.main-content{
+    padding-top: 60px;
+}
+
+.upvote{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.downvote{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.subreddit{
+    padding-top: 90px;
+    padding-right: 25px;
+}
+
+.button-long{
+    padding-left:33%;
+    padding-right:33%;
+}
+
+.green-modal{
+    background-color: #5cb85c;
+}
+
+.white-text{
+    color:white;
+}
