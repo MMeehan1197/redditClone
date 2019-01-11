@@ -10,7 +10,6 @@ redditApp.config(['$routeProvider', function($routeProvider) {
     })
     .when("/green", {
       template: `<div class="main-content col-8">
-          <p>Poooooooop!</p>
         </div>`
     })
     .when("/r/:name*", {
