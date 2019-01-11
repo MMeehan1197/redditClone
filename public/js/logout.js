@@ -19,7 +19,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     
   } else{
     location = "index.html";
-    console.log("logged out");
   }  
     // No user is signed in.
     //location = "index.html"
@@ -29,9 +28,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 window.onload = function(){
-    console.log("logout");
     firebase.auth().signOut().then(function() {
-      console.log("logout successful")
       // Sign-out successful.
     }).catch(function(error) {
       // An error happened.

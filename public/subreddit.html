@@ -1,0 +1,129 @@
+<h3>{{title}}</h3>
+<p>{{info}}</p><br/>
+<h5>RULES:</h5>
+<p>{{rules}}</p>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-lg btn-info button-long" data-toggle="modal" data-target="#postModal">
+            New Post
+          </button>
+<p></p>
+<button type="button" class="btn btn-lg btn-info button-long" data-toggle="modal" data-target="#subredditModal">
+            New Subreddit
+          </button>
+
+<!-- Post Modal -->
+<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Make a new submission!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+      </div>
+      <div class="modal-body">
+        Enter the Title and text below in order to submit a post!
+
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Title</span>
+          </div>
+          <input class="form-control" type="text" id="postTitle" aria-label="Title">
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Body</span>
+          </div>
+          <textarea class="form-control" aria-label="Body" id="postData"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" type="submit" onClick="submitPost()" data-dismiss="modal" data-toggle="modal" data-target="#successModal">Submit Post</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Success Modal Post-->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header green-modal">
+        <h5 class="modal-title white-text" id="exampleModalLabel">Success!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+      </div>
+      <div class="modal-body" id="postModalBody">
+        You have successfully posted!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Create Subreddit Modal -->
+<div class="modal fade" id="subredditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Make a new submission!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+      </div>
+      <div class="modal-body">
+        Enter the subreddit Title and subreddit description below!
+
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Title</span>
+          </div>
+          <input class="form-control" type="text" id="subredditTitle" aria-label="Title">
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Description</span>
+          </div>
+          <textarea class="form-control" aria-label="Body" id="subredditData"></textarea>
+        </div>
+
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Rules</span>
+          </div>
+          <textarea class="form-control" aria-label="Body" id="subredditRules"></textarea>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" type="submit" onClick="createSubreddit()" data-dismiss="modal" data-toggle="modal" data-target="#successModalSubreddit">Create Subreddit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Success Modal Subreddit-->
+<div class="modal fade" id="successModalSubreddit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header green-modal">
+        <h5 class="modal-title white-text" id="exampleModalLabel">Success!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+      </div>
+      <div class="modal-body" id="subredditModalBody">
+        You have successfully created new subreddit!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

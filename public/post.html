@@ -1,0 +1,14 @@
+<div ng-repeat="post in posts">
+    <br/>
+    <div class="card">
+        <div class="card-header">
+            Submitted by: {{post.user}}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{post.title}}</h5>
+            <p class="card-text">{{post.content}}</p>
+            <button class="btn btn-primary upvote" ng-click="upvote(post)">Upvotes: {{post.upvotes}}</button>
+            <button class="btn btn-danger downvote" ng-click="downvote(post)">Downvotes: {{post.downvotes}}</button>
+        </div>
+    </div>
+</div>
